@@ -250,8 +250,7 @@ while(i != 6)
                 printf("Type the number you want to delete: ");
                 scanf("%d", &idNum);
                 n = delete(n,idNum);
-                break;
-                
+                break; 
         }
     }
 }
