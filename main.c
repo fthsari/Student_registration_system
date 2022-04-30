@@ -72,7 +72,7 @@ struct node *sortbyID(struct node *list)
     struct node *helper;
     struct node *min;
     struct node *returner;
-    int id, old_id;
+    int id;
 
     returner = (struct node*)malloc(sizeof(struct node));       //We can say that this function is the most
     returner = NULL;                                            //important function that does almost all the work
@@ -108,7 +108,7 @@ struct node *sortbyYears(struct node *list)
     struct node *helper;
     struct node *min;
     struct node *returner;
-    int id, old_id;
+    int id;
 
     returner = (struct node*)malloc(sizeof(struct node));
     returner = NULL;
@@ -144,7 +144,7 @@ struct node *sortbyFaculty(struct node *list)       //Almost same function like 
     struct node *helper;
     struct node *min;
     struct node *returner;
-    int id, old_id;
+    int id;
 
     returner = (struct node*)malloc(sizeof(struct node));
     returner = NULL;
@@ -177,8 +177,7 @@ struct node *sortbyFaculty(struct node *list)       //Almost same function like 
 
 int main()
 {
-char nameInsert[50];
-char nameDelete[50];
+char nameInsert[99];
 int idNum, i;
 struct node *n=NULL, *curser=NULL;                              //creating first node
 
@@ -227,11 +226,11 @@ while(i != 6)
                 }
                 break;
             case 3:
-                n = sortbyYears(n);
-                curser = n;
-                printf("Sorted by year:\n");
-                while (curser != NULL)
-                {
+                n = sortbyYears(n);                                     //After sorting by year in the pdf file of the 
+                curser = n;                                             //assignment, it may also be possible to check 
+                printf("Sorted by year:\n");                            //whether the id values are in order or not.
+                while (curser != NULL)                                  //Better results will be obtained if a large number 
+                {                                                       //of values other than 3 in the pdf are entered and the system is tested.
                     printf("%d %s\n",curser->id, curser->name);
                     curser = curser->next;
                 }
